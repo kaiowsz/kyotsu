@@ -1,13 +1,17 @@
 import React from 'react'
-import { Nav } from './Elements'
+import { Nav, NavbarContainer, NavLogo } from './Elements'
 
 function Navbar() {
   return (
-    <div>
-        <Nav>
-            Hello!
-        </Nav>
-    </div>
+    <>
+      <Nav>
+        <NavbarContainer>
+          <NavLogo>
+            Hello.
+          </NavLogo>
+        </NavbarContainer>
+      </Nav>
+    </>
   )
 }
 
