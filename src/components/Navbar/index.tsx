@@ -6,9 +6,7 @@ function Navbar() {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo>
-            Hello.
-          </NavLogo>
+          <NavLogo to="/">Something</NavLogo>
         </NavbarContainer>
       </Nav>
     </>
