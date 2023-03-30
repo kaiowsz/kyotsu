@@ -2,13 +2,18 @@ import React from 'react'
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavItem, NavLinks, NavMenu, NavBtn, NavBtnLink } from './Elements'
 import { FaBars } from "react-icons/fa"
 
-function Navbar() {
+interface NavbarProps {
+  toggleOpen: () => void;
+}
+
+function Navbar({toggleOpen}: NavbarProps) {
+
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">kyotsu</NavLogo>
-        <MobileIcon>
+        <MobileIcon onClick={toggleOpen}>
           <FaBars/>
         </MobileIcon>
         <NavMenu>

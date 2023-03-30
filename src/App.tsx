@@ -1,21 +1,17 @@
 import './App.css'
-import {useState} from "react"
-import Navbar from './components/Navbar'
 import { BrowserRouter } from 'react-router-dom'
-import Sidebar from './components/Sidebar'
+import Home from './pages'
 
 function App() {
-
-  const [something, setSomething] = useState()
 
   return (
     <div className="App">
       <BrowserRouter>
-        <Sidebar/>
-        <Navbar/>
+        <Home />
       </BrowserRouter>
     </div>
   )
+
 }
 
 export default App
