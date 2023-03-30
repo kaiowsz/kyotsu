@@ -1,5 +1,5 @@
 import React, {useState} from "react"
-import { Navbar, Sidebar } from "../components"
+import { Navbar, Sidebar, HeroSection } from "../components"
 
 const Home = () => {
 
