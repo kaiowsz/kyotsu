@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import { Navbar, Sidebar, HeroSection, InfoSection } from "../components"
-import { homeObjOne } from "../components/InfoSection/Data"
+import { homeObjOne, homeObjTwo, homeObjThree } from "../components/InfoSection/Data"
 
 const Home = () => {
 
@@ -16,6 +16,8 @@ const Home = () => {
       <Navbar toggleOpen={toggleOpen} />
       <HeroSection />
       <InfoSection {...homeObjOne} />
+      <InfoSection {...homeObjTwo} />
+      <InfoSection {...homeObjThree} />
     </>
   )
 }
