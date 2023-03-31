@@ -4,7 +4,7 @@ import { Button } from "../ButtonElement"
 import { BtnWrap, Column1, Column2, Heading, Img, ImgWrap, InfoContainer, InfoRow, InfoWrapper, SubTitle, TextWrapper, TopLine } from "./Elements"
 
 
-const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt}: any) => {
+const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkText, description, buttonLabel, img, alt, primary, dark, dark2}: any) => {
   return (
     <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
@@ -15,7 +15,16 @@ const InfoSection = ({lightBg, id, imgStart, topLine, lightText, headLine, darkT
                         <Heading lightText={lightText}>{headLine}</Heading>
                         <SubTitle darkText={darkText} >{description}</SubTitle>
                         <BtnWrap>
-                            <Button to="home">{buttonLabel}</Button>
+                            <Button 
+                            to="home" 
+                            smooth={true} 
+                            duration={500} 
+                            spy={true} 
+                            offset={-80}
+                            primary={primary ? 1 : 0}
+                            dark={dark ? 1 : 0}
+                            dark2={dark2 ? 1 : 0}
+                            >{buttonLabel}</Button>
                         </BtnWrap>
                     </TextWrapper>
                 </Column1>

@@ -2,7 +2,7 @@ import Image from "../../assets/images/car.svg"
 export const homeObjOne = {
     id: "about",
     lightBg: false,
-    lightText: true,
+    lightText: false,
     lightTextDesc: true,
     topLine: "Premium Bank",
     headLine: "Unlimited transactions with zero fees",
