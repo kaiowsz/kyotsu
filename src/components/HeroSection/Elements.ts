@@ -8,17 +8,17 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 800px;
+    height: 100vh;
     position: relative;
     z-index: 1;
 
-    /* :before {
+    :before {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%), linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+        background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, transparent 100%);
         z-index: 2;
-    } */
+    }
 
 `
 
@@ -29,13 +29,14 @@ export const HeroBg = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
 `
 
 export const VideoBg = styled.video`
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
     background: #232a34;
 `
