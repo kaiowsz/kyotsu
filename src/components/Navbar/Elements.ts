@@ -1,9 +1,13 @@
-import styled from "styled-components";
+import styled, { StyledComponentBase, StyledComponentInnerComponent, StyledComponentProps } from "styled-components";
 import { Link as LinkScroll } from "react-scroll"
 import { Link as LinkRouter } from "react-router-dom"
 
+interface NavProps {
+    scrollNav: boolean;
+}
+
 export const Nav = styled.nav`
-    background: black;
+    background: ${({scrollNav}: NavProps) => (scrollNav ? "#000" : "transparent")};
     color: white;
     height: 80px;
     margin-top: -80px;
@@ -14,6 +18,7 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10;
+    transition: background 0.6s;
 
     @media screen and (min-width: 960px) {
         transition: 0.8 all ease;

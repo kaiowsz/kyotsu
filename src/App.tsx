@@ -1,16 +1,20 @@
 import './App.css'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages'
+import SignIn from './pages/signin'
+import ErrorPage from './pages/404'
 
 function App() {
 
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Home />
-      </BrowserRouter>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/signin" element={<SignIn/>} />
+        <Route path="*" element={<ErrorPage/>}  />
+      </Routes>
+    </BrowserRouter>
+  ) 
 
 }
 
