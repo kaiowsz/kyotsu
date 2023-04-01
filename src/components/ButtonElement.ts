@@ -1,13 +1,20 @@
 import styled from "styled-components"
 import { Link } from "react-scroll"
 
+interface ButtonProps {
+    primary?: string | any;
+    big?: any;
+    dark?: any;
+    fontBig?: any;
+}
+
 export const Button = styled(Link)`
     border-radius: 50px;
-    background: ${({primary}: any) => (primary ? "#01BF71" : "#010606")};
+    background: ${({primary}: ButtonProps)  => (primary ? "#01BF71" : "#010606")};
     white-space: nowrap;
-    padding: ${({big}: any) => (big ? "14px 48px" : "12px 30px")};
-    color: ${({dark}: any) => (dark ? "#010606" : "FFF")};
-    font-size: ${({fontBig}: any) => (fontBig ? "20px" : "16px")};
+    padding: ${({big}) => (big ? "14px 48px" : "12px 30px")};
+    color: ${({dark}) => (dark ? "#010606" : "FFF")};
+    font-size: ${({fontBig}) => (fontBig ? "20px" : "16px")};
     outline: none;
     border: none;
     cursor: pointer;
@@ -17,6 +24,6 @@ export const Button = styled(Link)`
     transition: all .2s ease-in-out;
 
     &:hover {
-        background: ${({primary}: any) => (primary ? "#FFF" : "#01BF71")}; 
+        background: ${({primary}) => (primary ? "#FFF" : "#01BF71")}; 
     }
 `

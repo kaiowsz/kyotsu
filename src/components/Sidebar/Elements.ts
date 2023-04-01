@@ -1,9 +1,11 @@
-//@ts-nocheck
-
 import styled from "styled-components";
 import { FaTimes } from "react-icons/fa"
 import { Link as LinkScroll } from "react-scroll";
 import { Link as LinkRouter } from "react-router-dom";
+
+interface SidebarContainerProps {
+    isOpen: boolean;
+}
 
 export const SidebarContainer = styled.aside`
     position: fixed;
@@ -16,7 +18,7 @@ export const SidebarContainer = styled.aside`
     top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
-    opacity: ${({isOpen}) => isOpen ? "100%" : "0%"};
+    opacity: ${({isOpen}: SidebarContainerProps) => isOpen ? "100%" : "0%"};
     top: ${({isOpen}) => isOpen ? "0" : "-100%"};
 `
 
