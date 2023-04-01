@@ -1,8 +1,9 @@
-import React from 'react'
+import React from "react"
+import { ErrorComponent } from "../components/"
 
 const ErrorPage = () => {
   return (
-    <div>ErrorPage</div>
+    <ErrorComponent/>
   )
 }
 
