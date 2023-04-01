@@ -1,12 +1,12 @@
 import React from 'react'
-import { Navbar } from '../components'
+import { SignIn } from '../components'
 
-const SignIn = () => {
+const SignInPage = () => {
   return (
     <>
-    <Navbar/>
+    <SignIn/>
     </>
   )
 }
 
-export default SignIn
+export default SignInPage
